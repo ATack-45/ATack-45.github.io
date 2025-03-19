@@ -80,7 +80,7 @@ const extracurriculars = [
         title: "Scouts BSA",
         description: "Active scout with leadership experience, both locally and regionally. Also a elected and active Brotherhood member of the Order of the Arrow. Also ",
         achievements: [
-            '1000+ days of senior leadership (running the troop)',
+            '4 years of senior leadership (running the troop)',
             'Life scout (Eagle scout on March 26, 2025)',
             '300+ hours of service',
             '4x Mackinaw Island Honor Guard (1 year as senior leadership)',
@@ -144,18 +144,18 @@ const certifications = [
         image: './images/ETA badge.jpg'
     },
     {
-        title: 'Unity Certified User: Programming',
-        issuer: 'Certiport',
-        date: 'March 2024',
-        description: 'Proves knowledge of how to program game systems in C# within the Unity game engine.',
-        image: './images/Unity.png'
-    },
-    {
         title: 'CompTIA: ITF+',
         issuer: 'CompTIA',
         date: 'January 2024',
         description: 'Proves understanding of IT skills of database fundementals, key applications, security, and software development',
         image: './images/ITF.png'
+    },
+    {
+        title: 'Unity Certified User: Programming',
+        issuer: 'Certiport',
+        date: 'March 2024',
+        description: 'Proves knowledge of how to program game systems in C# within the Unity game engine.',
+        image: './images/Unity.png'
     }
 ];
 
