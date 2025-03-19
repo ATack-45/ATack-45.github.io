@@ -1,4 +1,4 @@
-import { fetchGitHubRepos, fetchRepoSummary } from './projects.js';
+import { fetchGitHubRepos, fetchRepoSummary, fetchRepoThumb } from './projects.js';
 
 
 // Skills data
@@ -330,12 +330,13 @@ async function renderProjects() {
 
     for (const repo of repos) {
         const summary = await fetchRepoSummary(repo);
+        const thumb = await fetchRepoThumb(repo);
         const col = document.createElement('div');
         col.className = 'col-lg-6 mb-4';
         
         col.innerHTML = `
             <div class="project-card card">
-                 <img src="${summary.image}" class="card-img-top project-image" alt="${repo.name}">
+                 <img src="${thumb}" class="card-img-top project-image" alt="${repo.name}">
                 <div class="card-body">
                     <h4 class="card-title">${repo.name}</h4>
                     <p class="card-text">${summary}</p>

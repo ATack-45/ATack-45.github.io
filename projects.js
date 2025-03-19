@@ -8,7 +8,6 @@ export async function fetchGitHubRepos(username) {
 export async function fetchRepoSummary(repo) {
     const summaryFiles = [
         `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/summary.md`,
-         `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/thumb.png`
         
     ];
 
@@ -24,5 +23,20 @@ export async function fetchRepoSummary(repo) {
     }
 
     return "No summary available.";
+}
+
+export async function fetchRepoThumb(repo) {
+    const thumbUrl = `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/thumb.png`;
+
+    try {
+        const response = await fetch(thumbUrl);
+        if (response.ok) {
+            return thumbUrl; 
+        }
+    } catch (error) {
+        console.log(`Could not fetch ${thumbUrl}`);
+    }
+
+    return "Github_Logo.png"; 
 }
 
