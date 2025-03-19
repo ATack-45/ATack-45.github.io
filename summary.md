@@ -1,0 +1,1 @@
+this repo hosts my personal portfolio, it utilises HTML, CSS, and JS, along with the github API to serve a comprehensive website about me.

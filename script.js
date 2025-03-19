@@ -1,4 +1,7 @@
- // Skills data
+import { fetchGitHubRepos, fetchRepoSummary } from './projects.js';
+
+
+// Skills data
  const programmingSkills = [
     { name: 'Python',  color: '#3776AB' },
     { name: 'C++',  color: '#00599C' },
@@ -159,19 +162,6 @@ const certifications = [
     }
 ];
 
-// Projects data
-const projects = [
-    {
-        title: 'Team Map generator',
-        description: 'Designed and implemented a system for Competitive robotics teams to interact with each other and share where they came from at national, and global competitions',
-        tech: 'HTML, JS, CSS, Google cloud APIs',
-        image: './images/Team Map.png',
-        link: '/Team-Map'
-    }
-];
-
-
-
 // Dynamically add skills
 function renderSkills() {
     const programmingContainer = document.getElementById('programming-skills');
@@ -228,7 +218,6 @@ function renderEducation() {
     });
 }
 
-
 //Dynamically add Extracurriculars
 function renderExtracurriculars () {
     const extracurricularsContainer = document.getElementById("extracurriculars-container");
@@ -269,6 +258,7 @@ function renderExtracurriculars () {
         extracurricularsContainer.appendChild(col);
     });
 }
+
 //Dynamically add Jobs
 function renderJobs () {
     const jobContainer = document.getElementById("jobs-container");
@@ -334,31 +324,32 @@ function renderCertifications() {
 }
 
 // Dynamically add projects
-function renderProjects() {
+async function renderProjects() {
     const container = document.getElementById('projects-container');
-    
-    projects.forEach(project => {
+    const repos = await fetchGitHubRepos("Atack-45");
+
+    for (const repo of repos) {
+        const summary = await fetchRepoSummary(repo);
         const col = document.createElement('div');
         col.className = 'col-lg-6 mb-4';
         
         col.innerHTML = `
             <div class="project-card card">
-                <img src="${project.image}" class="card-img-top project-image" alt="${project.title}">
+                 <img src="${summary.image}" class="card-img-top project-image" alt="${repo.name}">
                 <div class="card-body">
-                    <h4 class="card-title">${project.title}</h4>
-                    <p class="card-text">${project.description}</p>
-                    <p class="text-muted"><strong>Technologies:</strong> ${project.tech}</p>
-                    <a href="${project.link}" class="btn btn-primary">View Project</a>
+                    <h4 class="card-title">${repo.name}</h4>
+                    <p class="card-text">${summary}</p>
+                    <a href="${repo.html_url}" class="btn btn-primary">View Project</a>
                 </div>
             </div>
         `;
         
         container.appendChild(col);
-    });
+    }
 }
 
 // Initialize all renderers
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', async () => {
     renderSkills();
     renderEducation();
     renderCertifications();
