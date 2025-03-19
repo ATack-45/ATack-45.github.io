@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --dark-color: #212529;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+    background-color: var(--background-color);
+}
+
+.hero-section {
+    background: linear-gradient(rgba(13, 110, 253, 0.7), rgba(13, 110, 253, 0.9)), url('/api/placeholder/1200/600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.skill-badge {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.skill-badge:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card, .project-card, .activity-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.cert-card:hover, .project-card:hover, .activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    height: 180px;
+    object-fit: cover;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.contact-icon:hover {
+    color: var(--dark-color);
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 20px 0;
+}
+
+.resume-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+}

@@ -1,229 +1,242 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Alec's Digital Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top  "> <!-- Defining navbar -->
-        <div class="container-fluid"> <!-- container for all navbar components to fit in -->
-          <a class="navbar-brand" href="index.html">Home</a>  
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span> <!-- ending of home button code -->
-          </button>
-          <div class="collapse navbar-collapse d-flex" id="navbarSupportedContent"> <!-- container for all nav buttons -->
-            <ul class="navbar-nav  d-flex"> <!-- list for buttons -->
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#Experience">Experience</a> 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link align" href="index.html#Certifications">Certifications</a>
-              </li>
-            </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alec Tackitt - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awsome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+     <!-- Resume Button -->
+     <a href="#" class="btn btn-primary resume-btn" data-bs-toggle="modal" data-bs-target="#resumeModal">
+        <i class="fas fa-file-alt me-2"></i> Resume
+    </a>
 
-                <h1 class="position-absolute top-0 start-50 translate-middle-x ">Alec Tackitt's Online Portfolio</h1> <!-- Title-->
-          </div>
-          <div class= "d-flex align-items-end "> <!-- container for buttons on right side of the screen -->
-            <a class=" nav-link pe-4" href="ExternalLinks.html">External links</a>
-            </div>
-            <div class= "d-flex align-items-end ">
-            <a class=" nav-link" href="Contact.html">Contact</a>
+    <!-- Resume Modal -->
+    <div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="resumeModalLabel">Resume</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="embed-responsive">
+                        <img src="./images/resume.png" class="img-fluid" alt="Resume Preview">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="#" class="btn btn-primary" download>Download PDF</a>
+                </div>
             </div>
         </div>
-      </nav>
-    <div class="d-flex align-items-center pt-3 flex-column "> <!-- container for main sections of the page -->
-        <div class="d-flex align-items-center flex-column"> <!-- container for about section -->
-            <h2 > About</h2> <!-- Title -->
-            <br>
-            <p> Welcome to my online portfolio, showcasing all of my skills learned from tech center. including CSS and HTML, C#, and game devlopment in Unity.</p>
-        </div> <!-- End about section -->
-
-        <div class="pt-5 d-flex align-items-center flex-column">  <!-- container for experience section -->
-            <h2 id ="Experience"> Experience</h2>  
-            <br>
-
-            <h3>HTML & CSS </h3>  <!-- html and css start -->
-            <br>
-            <p> I learned and am now proficent in creating interactive and styled web pages in HTML and CSS. Pictured below is my page 
-              <br> on a review on the Mclaren P1, which you can view the code for, and even more projects, on my Github profile </p> <a class="link" href="https://github.com/alec-tackitt-student?tab=repositories"> here.</a> 
-              <br>
-              <img src="./images/Mclaren review page.png" class=" w-50 rounded mx-auto d-block img-thumbnail">  <!-- Example image-->
-
-            <h3 class="pt-3">C# </h3>  <!-- c# start -->
-            <br>
-            <p> I learned and am now proficent in creating easy to use and useful programs in C# using the .NET framework. Pictured below are
-            <br> a few C# projects i made, one being a simple letter grade calculator and another being a dice game to play. <br> you can see these and more at my Github page as well.</p>
-            <br>
-            <img src="./images/Letter Grade calculator example.png" class=" w-50 rounded mx-auto d-block img-thumbnail">  <!-- Example image-->
-            <img src="./images/Dice Game Examples.png" class=" w-50 rounded mx-auto d-block img-thumbnail">  <!-- Example image-->
-             
-            <h3 class="pt-3">Unity </h3>  <!-- Unity start -->
-            <br>
-            <p> Something A little different from the previous experiences was the oppurtunity to learn how to create games in Unity
-            <br> Below is my final project for the year, a racing game made in Unity. <br> you can see this game as well as a higher quality version with better graphics alongside my other unity projects on my github page as well.</p> 
-            <br>
-            <div id="unity-container" class="unity-desktop">   <!-- Final project stuff -->
-              <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-              <div id="unity-loading-bar">
-                <div id="unity-logo"></div>
-                <div id="unity-progress-bar-empty">
-                  <div id="unity-progress-bar-full"></div>
-                </div>
-              </div>
-              <div id="unity-warning"> </div>
-              <div id="unity-footer">
-                <div id="unity-webgl-logo"></div>
-                <div id="unity-fullscreen-button"></div>
-                <div id="unity-build-title">Final Project</div>
-              </div>
-            </div>
-            <script> <!-- more final project -->
-        
-              var container = document.querySelector("#unity-container");
-              var canvas = document.querySelector("#unity-canvas");
-              var loadingBar = document.querySelector("#unity-loading-bar");
-              var progressBarFull = document.querySelector("#unity-progress-bar-full");
-              var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-              var warningBanner = document.querySelector("#unity-warning");
-        
-              // Shows a temporary message banner/ribbon for a few seconds, or
-              // a permanent error message on top of the canvas if type=='error'.
-              // If type=='warning', a yellow highlight color is used.
-              // Modify or remove this function to customize the visually presented
-              // way that non-critical warnings and error messages are presented to the
-              // user.
-              function unityShowBanner(msg, type) {
-                function updateBannerVisibility() {
-                  warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-                }
-                var div = document.createElement('div');
-                div.innerHTML = msg;
-                warningBanner.appendChild(div);
-                if (type == 'error') div.style = 'background: red; padding: 10px;';
-                else {
-                  if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-                  setTimeout(function() {
-                    warningBanner.removeChild(div);
-                    updateBannerVisibility();
-                  }, 5000);
-                }
-                updateBannerVisibility();
-              }
-        
-              var buildUrl = "Build";
-              var loaderUrl = buildUrl + "/Builds.loader.js";
-              var config = {
-                dataUrl: buildUrl + "/Builds.data",
-                frameworkUrl: buildUrl + "/Builds.framework.js",
-                codeUrl: buildUrl + "/Builds.wasm",
-                streamingAssetsUrl: "StreamingAssets",
-                companyName: "DefaultCompany",
-                productName: "Final Project",
-                productVersion: "0.1",
-                showBanner: unityShowBanner,
-              };
-        
-              // By default Unity keeps WebGL canvas render target size matched with
-              // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-              // Set this to false if you want to decouple this synchronization from
-              // happening inside the engine, and you would instead like to size up
-              // the canvas DOM size and WebGL render target sizes yourself.
-              // config.matchWebGLToCanvasSize = false;
-        
-              if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                // Mobile device style: fill the whole browser client area with the game canvas:
-        
-                var meta = document.createElement('meta');
-                meta.name = 'viewport';
-                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-                document.getElementsByTagName('head')[0].appendChild(meta);
-                container.className = "unity-mobile";
-                canvas.className = "unity-mobile";
-        
-                // To lower canvas resolution on mobile devices to gain some
-                // performance, uncomment the following line:
-                // config.devicePixelRatio = 1;
-        
-        
-              } else {
-                // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        
-                canvas.style.width = "960px";
-                canvas.style.height = "600px";
-              }
-        
-              loadingBar.style.display = "block";
-        
-              var script = document.createElement("script");
-              script.src = loaderUrl;
-              script.onload = () => {
-                createUnityInstance(canvas, config, (progress) => {
-                  progressBarFull.style.width = 100 * progress + "%";
-                      }).then((unityInstance) => {
-                        loadingBar.style.display = "none";
-                        fullscreenButton.onclick = () => {
-                          unityInstance.SetFullscreen(1);
-                        };
-                      }).catch((message) => {
-                        alert(message);
-                      });
-                    };
-        
-              document.body.appendChild(script);
-        
-            </script>
-        </div>  <!-- End experience section -->
-       
-        <div class="pt-5 d-flex align-items-center flex-column ">  <!-- container for certifications section -->
-          <h1 id ="Certifications" class="pt-5"> Certifications</h1>  
-          <br>
-          <p> Throughout the year I have earned certifications in multiple areas of computer science. <br> below is a gallery of all the certificaions I have earned this year.</p>  
-            <br>
-
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-theme="dark" > <!-- Carousel of certifications -->
-              <div class="carousel-indicators"> <!-- bottom indicators -->
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active"> <!-- first certification -->
-                  <img src="./images/HTML & CSS.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-                <div class="carousel-item"> <!-- second certification -->
-                  <img src="./images/IC3.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-                <div class="carousel-item"> <!-- third certification -->
-                  <img src="./images/ITF.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-                <div class="carousel-item"> <!-- fourth certification -->
-                  <img src="./images/Unity.png" class="d-block w-100" alt="...">
-                  <div class="carousel-caption d-none d-md-block">
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">  <!-- Previous button -->
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next"> <!-- next button -->
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-      </div>
-      
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Alec Tackitt</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#extracurriculars">Extracurricular</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#jobs">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">Alec Tackitt</h1>
+            <h2 class="fw-light mb-4">Aspiring Computer Engineer</h2>
+            <p class="lead mb-5">High school senior passionate about technology and innovation</p>
+            <a href="#contact" class="btn btn-light btn-lg px-5 py-3 fw-bold">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="lead">I'm a high school senior with a passion for computer science and technology.</p>
+                    <p>I'm dedicated to expanding my skills and knowledge in the field of computer computer science. With a strong foundation in programming and problem-solving, I am excited to begin my journey in pursuing a degree in Computer Engineering next year.</p>
+                    <p>Through my projects and certifications, I've developed a deep understanding of various technologies and am constantly seeking to learn and grow in this ever-evolving field.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="./images/Portrait.jpg" alt="Profile Image" class="img-fluid rounded-circle shadow" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Programming Languages</h3>
+                            <div id="programming-skills" class="d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Web Development</h3>
+                            <div id="web-skills" class="d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Tools & Frameworks</h3>
+                            <div id="tools-skills" class="d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Other Skills</h3>
+                            <div id="other-skills" class="d-flex flex-wrap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Education Section -->
+     <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Education</h2>
+            <div class="row" id="education-container">
+                <!-- Education cards will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities Section -->
+    <section id="extracurriculars" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Extracurricular Activities</h2>
+            <div class="row" id="extracurriculars-container">
+                <!-- Extracurricular cards will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Work Experience</h2>
+            <div class="row" id="jobs-container">
+                <!-- Job cards will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Certifications</h2>
+            <div class="row" id="certifications-container">
+                <!-- Certification cards will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">My Projects</h2>
+            <div class="row" id="projects-container">
+                <!-- Project cards will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-body p-5">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <a href="#" class="contact-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="contact-icon"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="contact-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Alec Tackitt. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
