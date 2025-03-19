@@ -1,13 +1,45 @@
 // Fetch all GitHub repositories of a user
 export async function fetchGitHubRepos(username) {
-    const response = await fetch(`https://api.github.com/users/${username}/repos`);
-    return response.json();
+    return [
+        {
+            name: "Geo-Game",
+            url: "https://github.com/ATack-45/Geo-Game",
+            endpoint: "/Geo-Game"
+        },
+        {
+            name: "Pico-Probe",
+            url: "https://github.com/ATack-45/Pico-Probe",
+            endpoint: "/Pico-Probe"
+        },
+        {
+            name: "ATack-45.github.io",
+            url: "https://github.com/ATack-45/ATack-45.github.io",
+            endpoint: "/ATack-45.github.io"
+        },
+        {
+            name: "Team-Map",
+            url: "https://github.com/ATack-45/Team-Map",
+            endpoint: "/Team-Map"
+        },
+        {
+            name: "PROS-2025",
+            url: "https://github.com/ATack-45/PROS-2025",
+            endpoint: "/PROS-2025"
+        },
+        {
+            name: "PROS-Project-23-24",
+            url: "https://github.com/ATack-45/PROS-Project-23-24",
+            endpoint: "/PROS-Project-23-24"
+        }
+    ];
+    
+    
 }
 
 // Fetch the summary file (summary.md or fallback to README.md)
 export async function fetchRepoSummary(repo) {
     const summaryFiles = [
-        `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/summary.md`,
+        `https://raw.githubusercontent.com/ATack-45/${repo.endpoint}/main/summary.md`,
         
     ];
 
@@ -26,7 +58,7 @@ export async function fetchRepoSummary(repo) {
 }
 
 export async function fetchRepoThumb(repo) {
-    const thumbUrl = `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/thumb.png`;
+    const thumbUrl = `https://raw.githubusercontent.com/ATack-45/${repo.endpoint}/main/thumb.png`;
 
     try {
         const response = await fetch(thumbUrl);

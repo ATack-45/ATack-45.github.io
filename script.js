@@ -81,13 +81,13 @@ const jobs = [
 const extracurriculars = [
     {
         title: "Scouts BSA",
-        description: "Active scout with leadership experience, both locally and regionally. Also a elected and active Brotherhood member of the Order of the Arrow. Also ",
+        description: "Active Life Scout with leadership experience, both locally and regionally. Also an elected and active Brotherhood member of the Order of the Arrow (National Honor Society for Scouting).",
         achievements: [
-            '4 years of senior leadership (running the troop)',
-            'Life scout (Eagle scout on March 26, 2025)',
-            '300+ hours of service',
-            '4x Mackinaw Island Honor Guard (1 year as senior leadership)',
-            'Completed National Youth Leadership Training (NYLT)'
+            'Attained Life Scout rank (Eagle Scout rank anticipated on March 26, 2025)',
+            'Completed National Youth Leadership Training (NYLT)',
+            '300+ hours of service porject work',
+            '4 years of senior troop leadership (planning and running weekly meetings)',
+            '4x Mackinac Island Honor Guard participant (1 year as senior leadership)'
         ],
         startDate: "2018",
         endDate: "Present",
@@ -96,12 +96,12 @@ const extracurriculars = [
     },
     {
         title: "VEX Robotics",
-        description: "Competitive robotics team member. Participated as a team captian, CAD design, programmer, and notebooker. Won various awards for preformance as well as design and notebook skills.",
+        description: "Competitive robotics team member. Participated as a team captain, CAD designer, programmer, and notebooker. Received various awards for performance as well as design and notebook skills.",
         achievements: [
             '12x award winner',
             '7x state qualified',
             'Worked together with a team to make a effective robot',
-            'Participated in 30+ hours of robotics centered volunterring'
+            '30+ hours as a volunteer at regional robotics events'
         ],
         startDate: "2019",
         endDate: "Present",
@@ -329,7 +329,7 @@ async function renderProjects() {
     const repos = await fetchGitHubRepos("Atack-45");
 
     for (const repo of repos) {
-        const summary = await fetchRepoSummary(repo);
+        const summary = await fetchRepoSummary(repo,"Atack-45");
         const thumb = await fetchRepoThumb(repo);
         const col = document.createElement('div');
         col.className = 'col-lg-6 mb-4';
@@ -340,7 +340,7 @@ async function renderProjects() {
                 <div class="card-body">
                     <h4 class="card-title">${repo.name}</h4>
                     <p class="card-text">${summary}</p>
-                    <a href="${repo.html_url}" class="btn btn-primary">View Project</a>
+                    <a href="${repo.url}" class="btn btn-primary">View Project</a>
                 </div>
             </div>
         `;
