@@ -4,32 +4,38 @@ export async function fetchGitHubRepos(username) {
         {
             name: "Geo-Game",
             url: "https://github.com/ATack-45/Geo-Game",
-            endpoint: "/Geo-Game"
+            endpoint: "/Geo-Game",
+            status: "Active"
         },
         {
             name: "Pico-Probe",
             url: "https://github.com/ATack-45/Pico-Probe",
-            endpoint: "/Pico-Probe"
+            endpoint: "/Pico-Probe",
+            status: "In Development"
         },
         {
             name: "ATack-45.github.io",
             url: "https://github.com/ATack-45/ATack-45.github.io",
-            endpoint: "/ATack-45.github.io"
+            endpoint: "/ATack-45.github.io",
+            status: "Active"
         },
         {
             name: "Team-Map",
             url: "https://github.com/ATack-45/Team-Map",
-            endpoint: "/Team-Map"
+            endpoint: "/Team-Map",
+            status: "In Development"
         },
         {
             name: "PROS-2025",
             url: "https://github.com/ATack-45/PROS-2025",
-            endpoint: "/PROS-2025"
+            endpoint: "/PROS-2025",
+            status: "Archive"
         },
         {
             name: "PROS-Project-23-24",
             url: "https://github.com/ATack-45/PROS-Project-23-24",
-            endpoint: "/PROS-Project-23-24"
+            endpoint: "/PROS-Project-23-24",
+            status: "Archive"
         }
     ];
     

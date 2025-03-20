@@ -332,13 +332,27 @@ async function renderProjects() {
         const summary = await fetchRepoSummary(repo,"Atack-45");
         const thumb = await fetchRepoThumb(repo);
         const col = document.createElement('div');
+        let status;
         col.className = 'col-lg-6 mb-4';
         
+        switch (repo.status){
+            case ("In Development"):
+                status = "status-development"
+                break
+            case ("Active"):
+                status = "status-active"
+                break
+            case ("Archive"):
+                status = "status-archive"
+                break
+            
+        }
         col.innerHTML = `
             <div class="project-card card">
                  <img src="${thumb}" class="card-img-top project-image" alt="${repo.name}">
                 <div class="card-body">
                     <h4 class="card-title">${repo.name}</h4>
+                    <span class="status-circle ${status}">${repo.status}</span>
                     <p class="card-text">${summary}</p>
                     <a href="${repo.url}" class="btn btn-primary">View Project</a>
                 </div>
