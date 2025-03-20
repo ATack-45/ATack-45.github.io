@@ -2,6 +2,12 @@
 export async function fetchGitHubRepos(username) {
     return [
         {
+            name: "Clever App",
+            url: "https://github.com/ATack-45/Clever-App",
+            endpoint: "/Clever-App",
+            status: "Active"
+        },
+        {
             name: "Geo-Game",
             url: "https://github.com/ATack-45/Geo-Game",
             endpoint: "/Geo-Game",
@@ -35,6 +41,54 @@ export async function fetchGitHubRepos(username) {
             name: "PROS-Project-23-24",
             url: "https://github.com/ATack-45/PROS-Project-23-24",
             endpoint: "/PROS-Project-23-24",
+            status: "Archive"
+        },
+        {
+            name: "Functions Practice",
+            url: "https://github.com/ATack-45/Functions-Practice",
+            endpoint: "/Functions-Practice",
+            status: "Archive"
+        },
+        {
+            name: "Simple Game Programming Warm Up",
+            url: "https://github.com/ATack-45/simple-game-programming-warm-up",
+            endpoint: "/simple-game-programming-warm-up",
+            status: "Archive"
+        },
+        {
+            name: "Reinventing the Wheel",
+            url: "https://github.com/ATack-45/reinventing-the-wheel",
+            endpoint: "/reinventing-the-wheel",
+            status: "Archive"
+        },
+        {
+            name: "Alchemy Lab Game",
+            url: "https://github.com/ATack-45/Alchemy-lab-build",
+            endpoint: "/Alchemy-lab-build",
+            status: "Archive"
+        },
+        {
+            name: "Alchemy Lab Game",
+            url: "https://github.com/ATack-45/Alchemy-lab-build",
+            endpoint: "/Alchemy-lab-build",
+            status: "Archive"
+        },
+        {
+            name: "Tower Defence",
+            url: "https://github.com/ATack-45/Tower-Defence",
+            endpoint: "/Tower-Defence",
+            status: "Archive"
+        },
+        {
+            name: "Tower Defence",
+            url: "https://github.com/ATack-45/Tower-Defence",
+            endpoint: "/Tower-Defence",
+            status: "Archive"
+        },
+        {
+            name: "Final Project",
+            url: "https://github.com/ATack-45/Final-Project-Web-Build",
+            endpoint: "/Final-Project-Web-Build",
             status: "Archive"
         }
     ];
