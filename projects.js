@@ -129,6 +129,6 @@ export async function fetchRepoThumb(repo) {
         console.log(`Could not fetch ${thumbUrl}`);
     }
 
-    return "Github_Logo.png"; 
+    return "GitHub_Logo.png"; 
 }
 
