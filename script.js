@@ -69,7 +69,7 @@ const jobs = [
         responsiblities: [
             'Daily cleaning afterschool everyday',
             'Setup and cleanup for school events',
-            'Deep clean and resurface tiles of the whole school over summer break',
+            'Deep clean and resurface classrooms and hard floors of the whole school over summer break',
         ],
         startDate: "Oct 2022",
         endDate: "August 2023",
