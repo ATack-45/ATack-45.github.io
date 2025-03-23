@@ -22,14 +22,15 @@ const toolsSkills = [
     { name: 'Unreal Engine 5', color: '#412227' },
     { name: 'SQL server management studio', color: '#CAC4B0' },
     { name: 'Fusion 360', color: '#9DA1AA' },
-
+    { name: 'Onshape', color: '#61a5c2' }
 ];
 
 const otherSkills = [
     { name: 'Problem Solving', color: '#FF5722' },
     { name: 'Communication', color: '#9E9764' },
     { name: 'Database Design', color: '#4CAF50' },
-    { name: 'UI/UX Design', color: '#9C27B0' }
+    { name: '3D Modeling/Design', color: '#4CAF50' },
+    { name: 'UI/UX Design', color: '#979dac' }
 ];
 
 // Education data
