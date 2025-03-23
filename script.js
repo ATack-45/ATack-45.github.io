@@ -85,7 +85,7 @@ const extracurriculars = [
         achievements: [
             'Attained Life Scout rank (Eagle Scout rank anticipated on March 26, 2025)',
             'Completed National Youth Leadership Training (NYLT)',
-            '300+ hours of service porject work',
+            '300+ hours of service project work',
             '4 years of senior troop leadership (planning and running weekly meetings)',
             '4x Mackinac Island Honor Guard participant (1 year as senior leadership)'
         ],

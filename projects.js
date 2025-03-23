@@ -44,18 +44,6 @@ export async function fetchGitHubRepos(username) {
             status: "Archive"
         },
         {
-            name: "Functions Practice",
-            url: "https://github.com/ATack-45/Functions-Practice",
-            endpoint: "/Functions-Practice",
-            status: "Archive"
-        },
-        {
-            name: "Simple Game Programming Warm Up",
-            url: "https://github.com/ATack-45/simple-game-programming-warm-up",
-            endpoint: "/simple-game-programming-warm-up",
-            status: "Archive"
-        },
-        {
             name: "Reinventing the Wheel",
             url: "https://github.com/ATack-45/reinventing-the-wheel",
             endpoint: "/reinventing-the-wheel",
@@ -68,25 +56,7 @@ export async function fetchGitHubRepos(username) {
             status: "Archive"
         },
         {
-            name: "Alchemy Lab Game",
-            url: "https://github.com/ATack-45/Alchemy-lab-build",
-            endpoint: "/Alchemy-lab-build",
-            status: "Archive"
-        },
-        {
-            name: "Tower Defence",
-            url: "https://github.com/ATack-45/Tower-Defence",
-            endpoint: "/Tower-Defence",
-            status: "Archive"
-        },
-        {
-            name: "Tower Defence",
-            url: "https://github.com/ATack-45/Tower-Defence",
-            endpoint: "/Tower-Defence",
-            status: "Archive"
-        },
-        {
-            name: "Final Project",
+            name: "Car Driving Game",
             url: "https://github.com/ATack-45/Final-Project-Web-Build",
             endpoint: "/Final-Project-Web-Build",
             status: "Archive"
