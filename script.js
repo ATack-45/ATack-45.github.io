@@ -84,7 +84,7 @@ const extracurriculars = [
         title: "Scouts BSA",
         description: "Active Life Scout with leadership experience, both locally and regionally. Also an elected and active Brotherhood member of the Order of the Arrow (National Honor Society for Scouting).",
         achievements: [
-            'Attained Life Scout rank (Eagle Scout rank anticipated on March 26, 2025)',
+            'Attained Eagle Scout rank on March 26, 2025',
             'Completed National Youth Leadership Training (NYLT)',
             '300+ hours of service project work',
             '4 years of senior troop leadership (planning and running weekly meetings)',
